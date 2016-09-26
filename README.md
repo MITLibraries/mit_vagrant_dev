@@ -5,29 +5,31 @@ a local VM suitable for developing Rails applications.
 
 What it installs
 ==
-- apt packges necessary for typical rails developemnt
+- apt packages necessary for typical rails development
 - rvm (to manage ruby versions)
-- a version of ruby and the bunder gem
+- a version of ruby and the bundler gem
 - the heroku command line interface tool
 
 How to use it
 ==
-On you local computer
+On your local computer
 - Install vagrant
 - Clone this repo locally
-- `vagrant up`
+- `vagrant up` in the cloned directory of this repo
 - git clone the repo you want to work on into `src`
   - NOTE: you can do this for multiple projects instead of having a VM for each.
 - `vagrant ssh` gets you a shell on the rails vm
 - Note: do all your development using your preferred tools on your local
 computer. Do your `git` work on your local as well.
+- `vagrant halt` when you want to shutdown the vm (`vagrant up` to bring it
+   back)
 
 On the rails VM
-- `cd /vagrant/src/YOUR_PROJECT`
+- `cd /vagrant/src/YOUR_PROJECT` gets you to the linked directory
 - `bundle install` whenever you need to install gems
 - `bin/rails test` to run tests
 - `heroku local` to run a dev server. We use `heroku local` instead of
-`bin/rails server` so we can easily load environement variables by dropping a
+`bin/rails server` so we can easily load environment variables by dropping a
 `.env` file in `src` on your local (or `/vagrant/src/YOUR_PROJECT` in the vm
 as they are the same thing)
 
