@@ -16,8 +16,11 @@ On your local computer
 - Install vagrant
 - Clone this repo locally
 - `vagrant up` in the cloned directory of this repo
+  - NOTE: if you don't like the default of `src`, you can use `SYNCED_FOLDER` ENV
+  - EXAMPLE: `SYNCED_FOLDER="~/projects" vagrant up`
 - git clone the repo you want to work on into `src`
-  - NOTE: you can do this for multiple projects instead of having a VM for each.
+  - NOTE: if you changed with `ENV['SYNCED_FOLDER']` wherever you change it to
+  - NOTE: you can sync a directory containing multiple projects instead of having a VM for each.
 - `vagrant ssh` gets you a shell on the rails vm
 - Note: do all your development using your preferred tools on your local
 computer. Do your `git` work on your local as well.
