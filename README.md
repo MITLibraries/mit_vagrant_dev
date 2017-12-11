@@ -45,3 +45,12 @@ Making Changes
 If you end up needing additional packages installed to get gems to work,
 adding them to the `provision.sh` will probably make it easier later if it's a
 fairly common gem.
+
+Multiple Ruby Versions
+==
+If you are working on projects that use a different version of ruby than is
+installed by default, you can:
+- `rvm install 2.4.2` (replace `2.4.2` with the version you need)
+- `gem install bundler`
+- if your projects use `.ruby-version` files you are now all set and ruby will
+  be switched to the version each project needs automatically
