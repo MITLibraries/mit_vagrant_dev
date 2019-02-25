@@ -13,7 +13,8 @@ What it installs
 How to use it
 ==
 On your local computer
-- Install vagrant
+- Install [Virtualbox](https://www.virtualbox.org)
+- Install [Vagrant](https://www.vagrantup.com)
 - Clone this repo locally
 - `vagrant up` in the cloned directory of this repo
   - NOTE: if you don't like the default of `src`, you can use `SYNCED_FOLDER` ENV
