@@ -15,6 +15,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, path: "install-ruby.sh", args: "2.5.3 bundler", privileged: false
   config.vm.provision :shell, path: "install-heroku-cli.sh"
   config.vm.provision :shell, path: 'install-phantomjs.sh'
+  config.vm.provision :shell, path: "install-python.sh", args: "3.7"
 
   config.vm.synced_folder ENV['SYNCED_FOLDER'] || "src", "/vagrant/src"
 
